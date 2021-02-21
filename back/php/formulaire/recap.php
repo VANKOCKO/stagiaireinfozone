@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Form submitted</title>
+    <title>Formulaire envoyee</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,7 +18,31 @@
                 
                 <div class="alert alert-info">
                         <?php if(!empty($_POST['nom'])){ ?>
-                               <p>nom <strong></strong></p> 
+                               <p>nom <strong><?= $_POST['nom'];?></strong></p> 
+                        <?php } ?>
+                </div>
+                <div class="alert alert-info">
+                        <?php if(!empty($_POST['prenom'])){ ?>
+                               <p>prenom <strong><?= $_POST['prenom'];?></strong></p> 
+                        <?php } ?>
+                </div>
+                <div class="alert alert-info">
+                        <?php if(!empty($_POST['email'])){ ?>
+                               <p>email <strong><?= $_POST['email'];?></strong></p> 
+                        <?php } ?>
+                </div>
+                <?php echo " mdp : ".$_POST['mdp']."<br>"; ?>
+                <?php echo " mdpconfirm : ".$_POST['mdpconfirm']."<br>"; ?>
+                <div class="alert alert-info">
+                        <?php if(!empty($_POST['mdp'])){ ?>
+                                
+                                <?php if( $_POST['mdp'] == $_POST['mdpconfirm']) {?>
+                                    <? echo "ok" ;?>
+                                     <p class="text-success">Le mot de passe est ok !</p>
+                                <?php } else { ?>
+                                      <p class="text-danger">Mot de passe confirmation incorrect </p>
+                                <?php } ?>
+
                         <?php } ?>
                 </div>
 
