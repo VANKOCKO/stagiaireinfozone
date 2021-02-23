@@ -31,16 +31,14 @@
                                <p>email <strong><?= $_POST['email'];?></strong></p> 
                         <?php } ?>
                 </div>
-                <?php echo " mdp : ".$_POST['mdp']."<br>"; ?>
-                <?php echo " mdpconfirm : ".$_POST['mdpconfirm']."<br>"; ?>
+      
                 <div class="alert alert-info">
                         <?php if(!empty($_POST['mdp'])){ ?>
                                 
                                 <?php if( $_POST['mdp'] == $_POST['mdpconfirm']) {?>
-                                    <? echo "ok" ;?>
                                      <p class="text-success">Le mot de passe est ok !</p>
                                 <?php } else { ?>
-                                      <p class="text-danger">Mot de passe confirmation incorrect </p>
+                                      <p class="text-danger">Mot de passe confirmation incorrect!Veuillez ressaisir  </p>
                                 <?php } ?>
 
                         <?php } ?>

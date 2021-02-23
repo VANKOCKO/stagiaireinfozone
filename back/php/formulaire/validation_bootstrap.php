@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +5,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
@@ -21,6 +17,7 @@
                         <div class="form-group">
                             <label for="nom">Nom</label>
                             <input type="text" name="nom" class="form-control" id="nom" placeholder="Entrer votre  nom">
+                            <?php   ?>
                         </div>
                         <div class="form-group">
                             <label for="prenom">Prenom</label>
@@ -44,7 +41,7 @@
                                 Subscribe to our newsletter
                             </label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                        <input type="submit" name="envoyer" value="envoyer" class="btn btn-primary">Envoyer
                 </form>
             </div>
         </div>
